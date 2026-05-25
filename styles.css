@@ -52,6 +52,7 @@ div {
 
 .topbar,
 .year-panel,
+.attribution-panel,
 .quiz-panel,
 .result-panel {
   background: var(--paper);
@@ -113,6 +114,27 @@ h2 {
   color: var(--ink-soft);
   margin-bottom: 0;
   line-height: 1.7;
+}
+
+.attribution-panel {
+  padding: 18px 24px;
+  margin-bottom: 16px;
+}
+
+.attribution-panel h2 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.attribution-panel p {
+  color: var(--ink-soft);
+  font-size: 14px;
+  line-height: 1.75;
+  margin-bottom: 8px;
+}
+
+.attribution-panel p:last-child {
+  margin-bottom: 0;
 }
 
 .year-buttons {
@@ -293,6 +315,7 @@ progress {
 
   .topbar,
   .year-panel,
+  .attribution-panel,
   .quiz-panel,
   .result-panel {
     border-left: 0;
@@ -311,6 +334,7 @@ progress {
 
   .topbar,
   .year-panel,
+  .attribution-panel,
   .quiz-panel,
   .result-panel {
     padding: 16px;
@@ -337,6 +361,14 @@ progress {
   .year-panel {
     gap: 16px;
     margin-bottom: 10px;
+  }
+
+  .attribution-panel {
+    margin-bottom: 10px;
+  }
+
+  .attribution-panel h2 {
+    font-size: 17px;
   }
 
   .year-buttons {
@@ -409,6 +441,7 @@ progress {
 @media (max-width: 420px) {
   .topbar,
   .year-panel,
+  .attribution-panel,
   .quiz-panel,
   .result-panel {
     padding: 14px;

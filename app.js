@@ -140,11 +140,16 @@ function renderResults() {
 
       return `
         <article class="wrong-item">
-          <div class="meta">${question.year} 年｜第 ${question.questionNumber} 題</div>
+          <div class="wrong-heading">
+            <div class="meta">${question.year} 年｜第 ${question.questionNumber} 題</div>
+            <span class="wrong-badge">答錯</span>
+          </div>
           <h3>${escapeHtml(question.questionText)}</h3>
-          <p class="answer-line">你的答案：${userText}</p>
-          <p class="answer-line"><strong>官方正確解答：${escapeHtml(question.correctAnswer)}</strong></p>
-          <p class="answer-line">可給分答案：${accepted}</p>
+          <div class="answer-review">
+            <p class="answer-line user-answer"><span>你的答案</span>${userText}</p>
+            <p class="answer-line correct-answer"><span>官方正確解答</span><strong>${escapeHtml(question.correctAnswer)}</strong></p>
+            <p class="answer-line accepted-answer"><span>可給分答案</span>${accepted}</p>
+          </div>
           <p class="source">來源：${escapeHtml(question.sourceQuestionPdf)}；${escapeHtml(question.sourceAnswerPdf)}</p>
         </article>
       `;

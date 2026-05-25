@@ -1,0 +1,88 @@
+{
+  "years": {
+    "110": {
+      "questionPdf": "試題/110年試題.pdf",
+      "answerPdf": "答案/110答案.pdf",
+      "questionCount": 50,
+      "answerCount": 50,
+      "exceptions": [
+        {
+          "questionNumber": 19,
+          "officialAnswer": "A、C 均給分",
+          "scoreMode": "multi",
+          "acceptedAnswers": [
+            "A",
+            "C"
+          ]
+        },
+        {
+          "questionNumber": 44,
+          "officialAnswer": "A、B 均給分",
+          "scoreMode": "multi",
+          "acceptedAnswers": [
+            "A",
+            "B"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    "111": {
+      "questionPdf": "試題/111年試題.pdf",
+      "answerPdf": "答案/111答案.pdf",
+      "questionCount": 50,
+      "answerCount": 50,
+      "exceptions": [],
+      "issues": []
+    },
+    "112": {
+      "questionPdf": "試題/112年試題.pdf",
+      "answerPdf": "答案/112答案.pdf",
+      "questionCount": 50,
+      "answerCount": 50,
+      "exceptions": [
+        {
+          "questionNumber": 3,
+          "officialAnswer": "A、B、D 均給分",
+          "scoreMode": "multi",
+          "acceptedAnswers": [
+            "A",
+            "B",
+            "D"
+          ]
+        }
+      ],
+      "issues": []
+    },
+    "113": {
+      "questionPdf": "試題/113年試題.pdf",
+      "answerPdf": "答案/113答案.pdf",
+      "questionCount": 50,
+      "answerCount": 50,
+      "exceptions": [],
+      "issues": []
+    },
+    "114": {
+      "questionPdf": "試題/114年試題.pdf",
+      "answerPdf": "答案/114答案.pdf",
+      "questionCount": 50,
+      "answerCount": 50,
+      "exceptions": [
+        {
+          "questionNumber": 41,
+          "officialAnswer": "一律給分",
+          "scoreMode": "all",
+          "acceptedAnswers": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        }
+      ],
+      "issues": []
+    }
+  },
+  "issues": [],
+  "status": "ok"
+}

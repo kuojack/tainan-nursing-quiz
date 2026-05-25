@@ -137,6 +137,26 @@ function renderResults() {
       const accepted = question.scoreMode === "all"
         ? "一律給分"
         : question.acceptedAnswers.map((label) => escapeHtml(optionText(question, label))).join("；");
+      const optionReview = ["A", "B", "C", "D"].map((label) => {
+        const isUser = userAnswer === label;
+        const isAccepted = question.acceptedAnswers.includes(label);
+        const classes = [
+          "review-option",
+          isUser ? "is-user" : "",
+          isAccepted ? "is-correct" : "",
+        ].filter(Boolean).join(" ");
+        const tags = [
+          isUser ? "<span class=\"option-tag user-tag\">你的答案</span>" : "",
+          isAccepted ? "<span class=\"option-tag correct-tag\">正確答案</span>" : "",
+        ].join("");
+
+        return `
+          <li class="${classes}">
+            <div class="review-option-text">${escapeHtml(optionText(question, label))}</div>
+            <div class="review-option-tags">${tags}</div>
+          </li>
+        `;
+      }).join("");
 
       return `
         <article class="wrong-item">
@@ -149,6 +169,10 @@ function renderResults() {
             <p class="answer-line user-answer"><span>你的答案</span>${userText}</p>
             <p class="answer-line correct-answer"><span>官方正確解答</span><strong>${escapeHtml(question.correctAnswer)}</strong></p>
             <p class="answer-line accepted-answer"><span>可給分答案</span>${accepted}</p>
+          </div>
+          <div class="option-review-block">
+            <h4>選項對照</h4>
+            <ul class="option-review">${optionReview}</ul>
           </div>
           <p class="source">來源：${escapeHtml(question.sourceQuestionPdf)}；${escapeHtml(question.sourceAnswerPdf)}</p>
         </article>

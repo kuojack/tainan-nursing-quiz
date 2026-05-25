@@ -137,6 +137,11 @@ h2 {
   margin-bottom: 0;
 }
 
+.attribution-panel a {
+  color: var(--green-dark);
+  font-weight: 700;
+}
+
 .year-buttons {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
